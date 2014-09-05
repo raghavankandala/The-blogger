@@ -1,0 +1,17 @@
+<h1> Blogs in the System </h1>
+<hr/>
+
+<%= flash[:notice] unless flash[:notice].blank? %>
+
+<% if @blogs.empty? %>
+	<h4> No blogs created in this system! Be the first one ot create it. </h4>
+<% else %>
+	<ul>
+		<% @blogs.each do |blog| %>
+			<li> 
+				<%= blog.title %> <br/>
+				<%= blog.summary %>
+			</li>
+		<% end %>
+	</ul>
+<% end %>

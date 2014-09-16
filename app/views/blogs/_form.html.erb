@@ -1,14 +1,4 @@
-<% unless @blog.errors.empty? %>
-	<div class="error">
-		<b> Errors submitting the form </b>
-		<ul>
-		<% @blog.errors.full_messages.each do |fm| %>
-			<li><%= fm %></li>
-		<% end %>
-		</ul>
-	</div>
-<% end %>
-
+<%= render 'layouts/error_messages', :object => @blog %>
 <!-- HTML for the form >
 
 <form action="/blogs" method="post" id="new_blog" class="">
@@ -47,3 +37,4 @@
 
 	<%= f.submit %>
 <% end %>
+

@@ -11,4 +11,6 @@ class Blog < ActiveRecord::Base
 	validates :keywords, presence: :true
 	validates :published, presence: :true
 
+	has_many :blog_posts
+
 end

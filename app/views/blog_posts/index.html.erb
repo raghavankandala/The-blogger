@@ -8,6 +8,6 @@
 		<%= blog_post.published? ? "Published" : "Draft" %> <br/>
 		<%= "Published At: #{blog_post.published_at}" if blog_post.published? %> <br/>
 		<%= blog_post.author %>
-		<%= link_to "View More", blog_post %> | <%= link_to "Edit", edit_blog_post_path(blog_post) %>
+		<%= link_to "View More", blog_blog_post_path(@blog, blog_post) %> | <%= link_to "Edit", edit_blog_blog_post_path(@blog, blog_post) %>
 	</div>
 <% end %>

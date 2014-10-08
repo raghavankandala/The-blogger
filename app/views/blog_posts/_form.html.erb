@@ -1,6 +1,6 @@
 <%= render 'layouts/error_messages', :object => @blog_post %>
 
-<%= form_for (@blog_post) do |f| %>
+<%= form_for ([@blog, @blog_post]) do |f| %>
 	<%= f.label :title %> <br/>
 	<%= f.text_field :title %> <br/><br/>
 

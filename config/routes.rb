@@ -1,6 +1,8 @@
 Blogger::Application.routes.draw do
   resources :blogs do
-  	resources :blog_posts
+  	resources :blog_posts do
+		resources :comments
+	end
   end
 
   # The priority is based upon order of creation:

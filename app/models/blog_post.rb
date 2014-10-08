@@ -7,6 +7,7 @@ class BlogPost < ActiveRecord::Base
 
 	# Association
 	belongs_to :blog
+   has_many :comments
 
 	# Validations
 	validates :title, :presence => true

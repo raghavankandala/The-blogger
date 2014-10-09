@@ -1,5 +1,7 @@
 class BlogsController < ApplicationController
 
+   before_filter :authenticate_user!, :except => [:index, :show]
+
 	#before_filter :load_blog, :only => [:show, :edit, :update, :destroy]
 	before_filter :load_blog, :except => [:index, :new, :create]
 
